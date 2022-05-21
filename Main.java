@@ -11,9 +11,9 @@ public class Main extends Canvas{
     }
     for (int i = 0; i < sides; i++){//adds angles for shape to an array
       if (i == 0 | i == (sides-1)){
-        angles.add((double)(180-(360/sides)));//Switch the -1* to the other angles.add to invert the fractalvvvvvvvvvv
+        angles.add((double)(180-(360/sides)));//Switch the -1* to the other angles.add to invert the fractalvvv
       }else{
-        angles.add((double)-1*(360/sides));//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        angles.add((double)-1*(360/sides));//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       }
     }
     for (int i = 0; i < sides; i++){//repeats for each side of shape to make snowflake
