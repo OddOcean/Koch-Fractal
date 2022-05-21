@@ -17,7 +17,7 @@ public class Main extends Canvas{
       }
     }
     for (int i = 0; i < sides; i++){//repeats for each side of shape to make snowflake
-      fractal(8, 0.0006);//you need to adjust the second argument whenever you change the shape and the intensity becuase the size will change dramatically
+      fractal(8, 0.0006);//you need to adjust the second argument whenever you change the shape and the intensity becuase the size will change dramatically, not quite as much on shape though
       angle += 360/sides;
     }
     JFrame frame = new JFrame("Fractal");//sets up canvas vvv
