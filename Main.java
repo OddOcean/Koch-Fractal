@@ -29,7 +29,7 @@ public class Main extends Canvas{
     frame.setVisible(true);
     frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
   }
-  static double sides = 5;//creates this many sided shape (3 - triangle, 4 - square, ect...)
+  static double sides = 5;//creates this many sided base shape (3 - triangle, 4 - square, ect...)
   //fractal lists
   static ArrayList<Double> segments = new ArrayList<Double>();
   static ArrayList<Double> angles = new ArrayList<Double>();
@@ -39,7 +39,7 @@ public class Main extends Canvas{
   static double angle = 90;//change to adjust the starting angle
   static double x1 = 400;//change to adjust starting x and y
   static double y1 = 10;
-  static int quality = 9999;//skips this many steps in xys when drawing to save time (turn to 1 when drawing below iter 3 or so)
+  static int quality = 10;//skips this many steps when drawing
   public void paint(Graphics g){//draws finished snowflake
     for (int i = 0; i < xys.size() - 3; i += (2 * quality)){
       g.drawLine((int)Math.round(xys.get(i)), (int)Math.round(xys.get(i + 1)), (int)Math.round(xys.get(i + 2 + (2 * quality))), (int)Math.round(xys.get(i + 3 + (2 * quality))));
