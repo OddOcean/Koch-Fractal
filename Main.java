@@ -17,7 +17,7 @@ public class Main extends Canvas{
       }
     }
     for (int i = 0; i < sides; i++){//repeats for each side of shape to make snowflake
-      fractal(8, 0.0006);//you need to adjust the second argument whenever you change the shape and the intensity becuase the size will change dramatically, not quite as much on shape though
+      fractal(7, 0.0019);//you need to adjust the second argument whenever you change the shape and the intensity becuase the size will change dramatically, not quite as much on shape though
       angle += 360/sides;
     }
     JFrame frame = new JFrame("Fractal");//sets up canvas vvv
@@ -39,10 +39,10 @@ public class Main extends Canvas{
   static double angle = 90;//change to adjust the starting angle
   static double x1 = 400;//change to adjust starting x and y
   static double y1 = 10;
-  static int quality = 1;//skips this many steps in xys when drawing to save time (turn to 1 when drawing below iter 3 or so)
+  static int quality = 9999;//skips this many steps in xys when drawing to save time (turn to 1 when drawing below iter 3 or so)
   public void paint(Graphics g){//draws finished snowflake
     for (int i = 0; i < xys.size() - 3; i += (2 * quality)){
-      g.drawLine((int)Math.round(xys.get(i)), (int)Math.round(xys.get(i + 1)), (int)Math.round(xys.get(i + 2)), (int)Math.round(xys.get(i + 3)));
+      g.drawLine((int)Math.round(xys.get(i)), (int)Math.round(xys.get(i + 1)), (int)Math.round(xys.get(i + 2 + (2 * quality))), (int)Math.round(xys.get(i + 3 + (2 * quality))));
     }
   }
   public static void fractal(int iter, double zoom){//creates fractaled side of the shape
